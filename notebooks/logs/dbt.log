@@ -1,0 +1,52 @@
+[0m16:05:43.088153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002438AAC2A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002438892CA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002438B60C2D0>]}
+
+
+============================== 16:05:43.105220 | 314862d0-6d76-4a5c-8fa7-701098dc3c1b ==============================
+[0m16:05:43.105220 [info ] [MainThread]: Running with dbt=1.10.4
+[0m16:05:43.107161 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\yemisrach.tigiset\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt init telegram_dbt_project', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:05:43.174489 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\yemisrach.tigiset\.dbt
+[0m16:05:43.180381 [debug] [MainThread]: Starter project path: D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\include\starter_project
+[0m16:05:43.218244 [info ] [MainThread]: 
+Your new dbt project "telegram_dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:05:43.219438 [info ] [MainThread]: Setting up your profile.
+[0m21:54:38.808057 [error] [MainThread]: Encountered an error:
+
+[0m21:54:39.009524 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\cli\requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\cli\requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\task\init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\task\init.py", line 242, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m21:54:39.051383 [debug] [MainThread]: Command `dbt init` failed at 21:54:39.050638 after 20936.34 seconds
+[0m21:54:39.077258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002438BC6AEA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002438BCF6210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002438BABF570>]}
+[0m21:54:39.094246 [debug] [MainThread]: Flushing usage events
+[0m21:54:46.127700 [debug] [MainThread]: An error was encountered while trying to flush usage events
