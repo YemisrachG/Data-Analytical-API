@@ -1,0 +1,30 @@
+[0m22:38:44.986708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018F4FA02A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018F4D87CA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018F505482D0>]}
+
+
+============================== 22:38:44.998347 | a0ad67c5-e4c0-4d98-bee9-302cf73a1b57 ==============================
+[0m22:38:44.998347 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:38:44.999770 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\yemisrach.tigiset\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:49:17.179165 [error] [MainThread]: Encountered an error:
+
+[0m22:49:17.188100 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\cli\requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\cli\requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\task\init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\dbt\task\init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "D:\Wk 7 Data Engineering Challenge\Data-Analytical-API\venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:49:17.192026 [debug] [MainThread]: Command `dbt init` failed at 22:49:17.191616 after 632.50 seconds
+[0m22:49:17.193263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018F51B7AD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018F51C05FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018F509FF9B0>]}
+[0m22:49:17.194451 [debug] [MainThread]: Flushing usage events
+[0m22:49:18.386177 [debug] [MainThread]: An error was encountered while trying to flush usage events
